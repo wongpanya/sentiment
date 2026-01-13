@@ -2,7 +2,7 @@
 import joblib
 from pathlib import Path
 
-MODEL_PATH = Path("models/sentiment_baseline_tfidf_lr.joblib")
+MODEL_PATH = Path("sentiment_baseline_tfidf_lr.joblib")
 
 model = joblib.load(MODEL_PATH)
 
@@ -22,3 +22,4 @@ def predict_sentiment(text: str):
         "sentiment": pred,
         "confidence": round(float(max(proba)), 4)
     }
+
